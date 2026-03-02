@@ -11,12 +11,13 @@ if (!SHOPIFY_DOMAIN || !SHOPIFY_STOREFRONT_TOKEN) {
 
 export async function shopifyFetch(query: string, variables: Record<string, any> = {}) {
   const endpoint = `https://${SHOPIFY_DOMAIN}/api/${API_VERSION}/graphql.json`;
+  const headers: Record<string, string> = {
+    'Content-Type': 'application/json',
+    'X-Shopify-Storefront-Access-Token': SHOPIFY_STOREFRONT_TOKEN || '',
+  };
   const res = await fetch(endpoint, {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'X-Shopify-Storefront-Access-Token': SHOPIFY_STOREFRONT_TOKEN,
-    },
+    headers,
     body: JSON.stringify({ query, variables }),
     next: { revalidate: 60 },
   });

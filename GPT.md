@@ -66,3 +66,11 @@
 You can also deploy to Netlify or any platform that supports Next.js. For custom domains, configure DNS in your deployment provider.
 
 Let me know if you want a step-by-step guide for a specific platform or need help with Git setup!
+
+---
+
+### User: vercel build fails due to token issue:
+
+(Type error in shopify.ts: fetch headers type issue when token is undefined)
+
+### Copilot: Fixed the type error by ensuring fetch headers are always a valid Record<string, string> and never undefined. The header value for the token is set to an empty string if missing, which satisfies the type system and prevents build errors. Try building again.
