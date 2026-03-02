@@ -1,40 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/create-next-app).
+# Shopify Headless Next.js App
+
+This project is a headless Shopify storefront built with Next.js, TypeScript, Tailwind CSS, and the Shopify Storefront API.
+
+## Features
+
+- Product listing page
+- Product detail page
+- Cart functionality
+- Shopify Storefront API integration
 
 ## Getting Started
 
-First, run the development server:
+### 1. Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Node.js v18, v20, or >=22 (recommended)
+- npm (latest recommended)
+- A Shopify store with Storefront API enabled
+
+### 2. Environment Variables
+
+Create a `.env.local` file in the project root with the following:
+
+```
+NEXT_PUBLIC_SHOPIFY_DOMAIN=your-store.myshopify.com
+NEXT_PUBLIC_SHOPIFY_STOREFRONT_TOKEN=your-storefront-access-token
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Replace with your actual Shopify store domain and Storefront API token.
 
-You can start editing the page by modifying `app/route.ts`. The page auto-updates as you edit the file.
+### 3. Install Dependencies
 
-## Learn More
+```
+npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+### 4. Run Locally
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Visit [http://localhost:3000](http://localhost:3000) to view the app.
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+You can deploy this app to Vercel, Netlify, or any platform that supports Next.js. For Vercel:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Push your code to GitHub.
+2. Import the repo in [Vercel](https://vercel.com/).
+3. Set the environment variables in the Vercel dashboard.
+4. Deploy!
 
-## API Routes
+## Next Steps
 
-This directory contains example API routes for the headless API app.
+- Implement product listing, detail, and cart pages.
+- Style with Tailwind CSS.
+- Extend functionality as needed.
 
-For more details, see [route.js file convention](https://nextjs.org/docs/app/api-reference/file-conventions/route).
+---
+
+For more details, see the Next.js and Shopify Storefront API documentation.
