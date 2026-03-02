@@ -74,3 +74,9 @@ Let me know if you want a step-by-step guide for a specific platform or need hel
 (Type error in shopify.ts: fetch headers type issue when token is undefined)
 
 ### Copilot: Fixed the type error by ensuring fetch headers are always a valid Record<string, string> and never undefined. The header value for the token is set to an empty string if missing, which satisfies the type system and prevents build errors. Try building again.
+
+---
+
+### User: the build completes, I only see {"message":"Hello world!"}
+
+### Copilot: The root route was showing only the default API response. Added a homepage at src/app/page.tsx with a welcome message and a link to /products. Now, visiting the root URL will show a storefront welcome page instead of the API JSON.
