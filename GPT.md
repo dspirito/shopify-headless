@@ -80,3 +80,9 @@ Let me know if you want a step-by-step guide for a specific platform or need hel
 ### User: the build completes, I only see {"message":"Hello world!"}
 
 ### Copilot: The root route was showing only the default API response. Added a homepage at src/app/page.tsx with a welcome message and a link to /products. Now, visiting the root URL will show a storefront welcome page instead of the API JSON.
+
+---
+
+### User: there is a build error: Conflicting route and page at /: route at /route and page at /page
+
+### Copilot: This error is caused by having both src/app/route.ts (an API route) and src/app/page.tsx (a page) at the root. Next.js does not allow both for the same path. To fix, remove src/app/route.ts so the homepage works and the build succeeds.
